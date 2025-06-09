@@ -1,0 +1,16 @@
+How it works.
+
+Server :
+- localhost: 3000/webhook
+  - gets the question.
+  - asks tavily for answers.
+  - converts the summary into openAI.
+- localhost routes all localhost:3000 to a ngrok endpoint.
+- user -> gives a question in whatsapp phone number.
+- number -> is registered to Twilio, it routes incoming message to ngrok server, and then to localhost
+    : Twilio has route incoming msg to a endpoint post.
+- ngrok passes the request to localserv /webhook post.
+- Request comes to server Uses tavily to
+
+
+whatsApp -> Twilio -> ngrok -> localhost. 
